@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "893778944503",
+    "project_id": "alfa-team-5a7e4",
+    "storage_bucket": "alfa-team-5a7e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893778944503:android:6b4d4e3440a5787779cef2",
+        "android_client_info": {
+          "package_name": "com.example.alfateam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "893778944503-2eukpt8cj4eirg44a8398hgnipul1djk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.alfateam",
+            "certificate_hash": "2685fc4ae76bbb225ca3353fefdcaf63c23d3e14"
+          }
+        },
+        {
+          "client_id": "893778944503-lvnlpkl8ic0eg2vu24457u5dhl6sg8qp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWOMZfoJh7WJixlMDcy2G_3xNMnil64Zk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "893778944503-lvnlpkl8ic0eg2vu24457u5dhl6sg8qp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
