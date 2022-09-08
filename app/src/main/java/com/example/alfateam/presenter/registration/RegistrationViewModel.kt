@@ -33,9 +33,6 @@ class RegistrationViewModel @Inject constructor (private val getHeroUseCase: Get
 
     }
 
-    fun getHero(){
-
-    }
 
     fun registrationUser( email: String, password: String,login: String,hero: Hero){
         registrationUser.regUser(email,password,login,hero)

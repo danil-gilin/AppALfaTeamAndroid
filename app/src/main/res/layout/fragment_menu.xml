@@ -4,16 +4,93 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#748E43"
+    android:background="#BF9239"
     tools:context=".presenter.menu.MenuFragment">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/hero_img_menu"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/backgroung_img_main"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/login_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/alpha_team_reg"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/grafiti_font"
+        android:text="user"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/hero_img_menu"
+        app:layout_constraintStart_toEndOf="@+id/hero_img_menu"
+        app:layout_constraintTop_toTopOf="@+id/hero_img_menu" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rc_app"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:background="#61492A"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hero_img_menu"
+        tools:listitem="@layout/menuapp_item" />
+
+    <ProgressBar
+        android:id="@+id/raiting"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:progress="50"
+        android:progressDrawable="@drawable/progress_bar_gradient"
+        app:layout_constraintBottom_toBottomOf="@+id/login_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/login_txt"
+        app:layout_constraintTop_toTopOf="@+id/login_txt" />
+
+    <TextView
+        android:id="@+id/rating_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/grafiti_font"
+        android:text="Рейтинг"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/raiting"
+        app:layout_constraintEnd_toEndOf="@+id/raiting"
+        app:layout_constraintStart_toStartOf="@+id/raiting"
+        app:layout_constraintTop_toTopOf="@+id/hero_img_menu" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="5dp"
+
+        android:background="@drawable/shadow_menu"
+        app:layout_constraintBottom_toTopOf="@+id/rc_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progress_menu"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:indeterminateDrawable="@drawable/progress_bar_loading"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

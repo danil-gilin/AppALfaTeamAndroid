@@ -56,7 +56,6 @@ class Registration : Fragment() {
         binding=FragmentRegistrationBinding.inflate(inflater)
 
         binding.rcPerson.adapter=adapterHero
-        viewModel.getHero()
 
         viewModel.heroStatus.observe(viewLifecycleOwner) {
                 adapterHero.submitList(it)

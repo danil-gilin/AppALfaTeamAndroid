@@ -9,6 +9,12 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background_splash_Screen">#B5763F</color>
     <color name="background_registration">#BD8511</color>
-    <color name="registration_input_text">#55371F</color>
+    <color name="background_brown_item">#55371F</color>
     <color name="registration_hint">#C19E73</color>
+    <color name="app_menu_back">#59321A</color>
+    <color name="app_menu_back_line">#1A2502</color>
+    <color name="progressColorPlus">#1A2502</color>
+    <color name="badOlegRed">#631111</color>
+    <color name="luckOlegGreen">#9A6C0C</color>
+
 </resources>

@@ -11,6 +11,8 @@ import javax.inject.Inject
 class RepositoryAuth @Inject constructor() {
     private val auth= FirebaseAuth.getInstance()
     private  val dbFirestoreUser = FirebaseFirestore.getInstance().collection("User")
+    private  val dbFirestoreHero = FirebaseFirestore.getInstance().collection("Hero")
+    private  var localUser:User?=null
 
     fun regUser(email: String, password: String,login:String,hero: Hero) {
         auth.createUserWithEmailAndPassword(email, password).addOnSuccessListener {
@@ -51,7 +53,25 @@ class RepositoryAuth @Inject constructor() {
         }
     }
 
-    fun getUser(){
+    suspend fun getUser(token:String):User{
+    if(localUser!=null){
+        Log.d("user","local")
+        return localUser!!
 
+    }else {
+        val userHash = dbFirestoreUser.document(token).get().await()
+        val heroHash = dbFirestoreHero.document(userHash.getString("Hero")!!).get().await()
+
+        val hero = Hero(
+            heroHash.id,
+            heroHash.getString("Name")!!,
+            heroHash.getString("Img_url")!!,
+            heroHash.getString("Description")!!,
+            heroHash.get("Rating").toString().toInt()
+        )
+            localUser=User(token, userHash.getString("Login") as String, hero)
+        return User(token, userHash.getString("Login") as String, hero)
+
+    }
     }
 }

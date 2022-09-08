@@ -35,11 +35,9 @@ class MainFragment : Fragment() {
     ): View {
         binding=FragmentMainBinding.inflate(inflater)
 
-        auth.signOut()
-
-     /*if(auth.currentUser!=null){
+     if(auth.currentUser!=null){
             findNavController().navigate(R.id.action_mainFragment_to_menuFragment)
-        }*/
+        }
 
 
         binding.btnLogin.setOnClickListener {

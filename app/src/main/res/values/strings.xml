@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ALFA TEAM</string>
+    <string name="OlegLucky">Олег выйграл пиво!!!</string>
+    <string name="OlegBad">Олегу прийдется задавить удава</string>
 </resources>

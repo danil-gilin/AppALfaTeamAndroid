@@ -80,7 +80,7 @@
                     android:id="@+id/edit_email"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/registration_input_text">
+                    android:background="@color/background_brown_item">
 
                 </com.google.android.material.textfield.TextInputEditText>
 
@@ -104,7 +104,7 @@
                     android:id="@+id/edit_password"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/registration_input_text"
+                    android:background="@color/background_brown_item"
                     android:inputType="textPassword">
 
                 </com.google.android.material.textfield.TextInputEditText>
@@ -129,7 +129,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:backgroundTint="@color/registration_input_text"
+                android:backgroundTint="@color/background_brown_item"
                 android:text="Погнали"
                 android:textColor="@color/registration_hint"
                 app:cornerRadius="10dp"
@@ -166,7 +166,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Вы еще не в ALFA TEAM?"
-                    android:textColor="@color/registration_input_text" />
+                    android:textColor="@color/background_brown_item" />
 
                 <TextView
                     android:id="@+id/reg_text_go"
