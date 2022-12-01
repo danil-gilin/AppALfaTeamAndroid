@@ -14,7 +14,7 @@ import javax.inject.Inject
 
 class MenuViewModel @Inject constructor(private val getUserFullInfoUseCase: GetUserFullInfoUseCase) : ViewModel() {
 
-    private val _state= MutableStateFlow<StateMenu>(StateMenu.Success(User("","", Hero("","","","",0))))
+    private val _state= MutableStateFlow<StateMenu>(StateMenu.Success(User("","", Hero("","","","",0,),System.currentTimeMillis())))
      val state=_state.asStateFlow()
 
 

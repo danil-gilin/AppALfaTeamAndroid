@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="0dp"
+        android:overScrollMode="never"
         tools:layout_editor_absoluteY="-16dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -87,6 +88,7 @@
                 android:hint="Логин"
                 android:textColorHint="@color/registration_hint"
                 app:errorEnabled="true"
+                app:errorTextColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/Preview">
@@ -111,6 +113,7 @@
                 android:hint="Почта"
                 android:textColorHint="@color/registration_hint"
                 app:errorEnabled="true"
+                app:errorTextColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/login_layout">
@@ -135,6 +138,7 @@
                 android:hint="Пароль"
                 android:textColorHint="@color/registration_hint"
                 app:errorEnabled="true"
+                app:errorTextColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/email_layout">
@@ -151,6 +155,7 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rc_person"
+                android:overScrollMode="never"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -210,7 +215,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Вы не выбрали георя"
-                android:textColor="#FA0707"
+                android:textColor="@color/Error"
                 android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="@+id/txt_description"
                 app:layout_constraintStart_toStartOf="@+id/choose_hero"

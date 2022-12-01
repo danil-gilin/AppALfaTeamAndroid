@@ -18,6 +18,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
 import javax.inject.Inject
 
+
 @AndroidEntryPoint
 class DollarFragment : Fragment() {
 
@@ -30,6 +31,7 @@ class DollarFragment : Fragment() {
 
     private val viewModel: DollarViewModel by viewModels{factoryDollar}
     lateinit var binding:FragmentDollarBinding
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -48,12 +49,30 @@ class MenuFragment : Fragment() {
         binding=FragmentMenuBinding.inflate(inflater)
 
         viewModel.getUserInfo(auth.currentUser?.uid.toString())
+       Log.d("size", activity?.supportFragmentManager?.fragments?.size.toString())
+
+
+
 
         binding.rcApp.adapter=adapter
-        adapter.submitList(listOf(MenuApp("dollar",R.raw.sad_lottie,R.id.action_menuFragment_to_dollarFragment),
-            MenuApp("dollar",R.raw.dollar_lottie,R.id.action_menuFragment_to_dollarFragment),
-            MenuApp("dollar",R.raw.sad_lottie,R.id.action_menuFragment_to_dollarFragment)))
+        adapter.submitList(listOf(MenuApp("SAD",R.raw.sad_lottie,R.id.action_menuFragment_to_sadFragment),
+            MenuApp("DOLLAR",R.raw.dollar_lottie,R.id.action_menuFragment_to_dollarFragment),
+            MenuApp("DOLLAR",R.raw.dollar_lottie,R.id.action_menuFragment_to_dollarFragment)))
 binding.rcApp.layoutManager=GridLayoutManager(requireContext(),2,GridLayoutManager.VERTICAL,false)
+
+
+        binding.siginOut.setOnClickListener {
+            auth.signOut()
+            val navOptions: NavOptions = NavOptions.Builder()
+                .setPopUpTo(R.id.menuFragment, true)
+                .build()
+            findNavController().navigate(
+                R.id.action_menuFragment_to_mainFragment,
+                null,
+                navOptions = navOptions
+            )
+        }
+
 
         viewLifecycleOwner.lifecycleScope.launchWhenStarted {
            viewModel.state.collect{

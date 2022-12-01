@@ -17,7 +17,7 @@
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/dollar_lottie"
-        app:lottie_repeatMode="reverse"></com.airbnb.lottie.LottieAnimationView>
+        app:lottie_repeatMode="reverse" />
 
     <TextView
         android:id="@+id/app_name"
@@ -28,7 +28,8 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:layout_weight="1"
+        android:fontFamily="@font/grafiti_font"
         android:gravity="center"
         android:padding="5dp"
-        android:text="TextView" />
+        android:text="Text View" />
 </LinearLayout>

@@ -15,4 +15,8 @@
         <item name="background">@color/background_brown_item</item>
         <item name="android:progressTint">#4A7814</item>
     </style>
+
+    <style name="WelcomeErrorAppearance" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textColor">@color/black</item>
+    </style>
 </resources>

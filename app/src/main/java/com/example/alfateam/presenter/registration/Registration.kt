@@ -10,18 +10,22 @@ import android.view.ViewGroup
 
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 import com.example.alfateam.R
 import com.example.alfateam.databinding.FragmentRegistrationBinding
+import com.example.alfateam.entity.Constance
 import com.example.alfateam.entity.Hero
 import com.example.alfateam.presenter.main.State
 import com.example.alfateam.presenter.registration.adapter.HeroAdapter
+import com.google.firebase.auth.FirebaseAuth
 
 
 import dagger.hilt.android.AndroidEntryPoint
+import java.lang.reflect.Constructor
 
 import javax.inject.Inject
 
@@ -45,6 +49,8 @@ class Registration : Fragment() {
 
     private var scrollRcPerson=true
     private var action: Action =Action.NoChooseHero
+
+    private val auth= FirebaseAuth.getInstance()
 
     private var hero:Hero?=null
     lateinit var binding: FragmentRegistrationBinding
@@ -109,13 +115,20 @@ class Registration : Fragment() {
                        binding.emailLayout.error =null
                        binding.passwordLayout.error =null
                        binding.errorHeroTxt.visibility=View.INVISIBLE
+
+
+                       val bundle=Bundle()
+                       bundle.putString(Constance.EMAIL_REG_TO_LOG,binding.emailLayoutEdit.text.toString())
+                       bundle.putString(Constance.PASSWORD_REG_TO_LOG,binding.passwordLayoutEdit.text.toString())
+
+                       findNavController().popBackStack()
                    }
+                   else -> {}
                }
            }
        }
 
         binding.loginText.setOnClickListener {
-            findNavController().navigate(R.id.action_registration_to_mainFragment)
             findNavController().popBackStack()
         }
 

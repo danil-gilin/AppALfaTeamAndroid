@@ -16,7 +16,7 @@ import javax.inject.Inject
 
 class MainViewModel @Inject constructor(private val loginUserUseCase: LoginUserUseCase): ViewModel() {
 
-    private val _inputState= MutableStateFlow<State>(State.Success)
+    private val _inputState= MutableStateFlow<State>(State.Start)
     val inputState=_inputState.asStateFlow()
 
    private val auth=FirebaseAuth.getInstance()
@@ -71,5 +71,9 @@ class MainViewModel @Inject constructor(private val loginUserUseCase: LoginUserU
 
     fun isEmailValid(email: CharSequence?): Boolean {
         return Patterns.EMAIL_ADDRESS.matcher(email).matches()
+    }
+
+    fun refreshState() {
+        _inputState.value=State.Start
     }
 }

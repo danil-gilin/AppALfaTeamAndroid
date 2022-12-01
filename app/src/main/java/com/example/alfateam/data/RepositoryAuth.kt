@@ -17,11 +17,11 @@ class RepositoryAuth @Inject constructor() {
     fun regUser(email: String, password: String,login:String,hero: Hero) {
         auth.createUserWithEmailAndPassword(email, password).addOnSuccessListener {
             if(it.user?.uid !=null){
-                val user= User(it.user!!.uid,login,hero)
+                val user= User(it.user!!.uid,login,hero,0)
                 putUserDB(user)
             }
-        }
 
+        }
     }
 
     suspend fun checkUserLogin(login: String):Boolean{
@@ -45,7 +45,7 @@ class RepositoryAuth @Inject constructor() {
     }
 
     fun putUserDB(user:User){
-        val userHashMap= hashMapOf("Login" to user.login,"Hero" to user.hero.id)
+        val userHashMap= hashMapOf("Login" to user.login,"Hero" to user.hero.id,"Time" to user.time)
         dbFirestoreUser.document(user.uid).set(userHashMap).addOnSuccessListener {
             Log.d("Registration", "DocumentSnapshot successfully written!")
         }.addOnFailureListener{
@@ -69,8 +69,10 @@ class RepositoryAuth @Inject constructor() {
             heroHash.getString("Description")!!,
             heroHash.get("Rating").toString().toInt()
         )
-            localUser=User(token, userHash.getString("Login") as String, hero)
-        return User(token, userHash.getString("Login") as String, hero)
+            localUser=User(token, userHash.getString("Login") as String, hero,
+                userHash.getLong("Time")!!
+            )
+        return User(token, userHash.getString("Login") as String, hero,userHash.getLong("Time")!!)
 
     }
     }

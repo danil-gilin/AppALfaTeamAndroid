@@ -16,5 +16,7 @@
     <color name="progressColorPlus">#1A2502</color>
     <color name="badOlegRed">#631111</color>
     <color name="luckOlegGreen">#9A6C0C</color>
+    <color name="AppBackOne">#61492A</color>
+    <color name="Error">#610909</color>
 
 </resources>

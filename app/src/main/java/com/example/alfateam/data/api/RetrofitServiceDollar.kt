@@ -1,12 +1,15 @@
 package com.example.alfateam.data.api
 
-import com.example.alfateam.entity.dollar.Dollar
+import com.example.alfateam.entity.Constance
+import com.example.alfateam.entity.dollar_to_rub.DollarToRub
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Header
+import retrofit2.http.Headers
 
-private const val BASE_URL="https://currate.ru/"
-private const val API_KEY="2a6415e0acaec7dfb272f518d4e318a8"
+private const val BASE_URL="https://api.apilayer.com/"
+
 
 object RetrofitServiceDollar {
     private val retrofit= Retrofit.Builder()
@@ -19,6 +22,7 @@ object RetrofitServiceDollar {
 
 
 interface DollarApi {
-    @GET("api/?get=rates&pairs=USDRUB&key=$API_KEY")
-    suspend fun getDollar(): Dollar
+    @Headers("apikey:7qPdgJYo7qNTDSVNeBPEWEPd6uI0g8Hj")
+    @GET("fixer/convert?to=RUB&from=USD&amount=1")
+    suspend fun getDollar(): DollarToRub
 }

@@ -24,7 +24,7 @@ class RegistrationViewModel @Inject constructor (private val getHeroUseCase: Get
     private val _heroStatus= getHeroUseCase.getHero()
     val heroStatus=_heroStatus.asLiveData()
 
-    private val _inputState= MutableStateFlow<State>(State.Success)
+    private val _inputState= MutableStateFlow<State>(State.Start)
     val inputState=_inputState.asStateFlow()
 
     private val auth= FirebaseAuth.getInstance()

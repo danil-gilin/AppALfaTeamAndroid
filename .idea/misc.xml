@@ -3,14 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/ALFATEAM/app/src/main/res/drawable/appitem_background.xml" value="0.4645" />
+        <entry key="..\:/ALFATEAM/app/src/main/res/drawable/appitem_background.xml" value="0.33" />
         <entry key="..\:/ALFATEAM/app/src/main/res/drawable/backgroung_img_main.xml" value="0.2975" />
+        <entry key="..\:/ALFATEAM/app/src/main/res/drawable/btn_minus.xml" value="0.4215" />
+        <entry key="..\:/ALFATEAM/app/src/main/res/drawable/btn_minus_enabled.xml" value="0.4205" />
+        <entry key="..\:/ALFATEAM/app/src/main/res/drawable/btn_minus_not_enabled.xml" value="0.4215" />
+        <entry key="..\:/ALFATEAM/app/src/main/res/drawable/btn_plus.xml" value="0.4205" />
+        <entry key="..\:/ALFATEAM/app/src/main/res/drawable/btn_plus_enabled.xml" value="0.4205" />
+        <entry key="..\:/ALFATEAM/app/src/main/res/drawable/btn_plus_not_enabled.xml" value="0.4215" />
+        <entry key="..\:/ALFATEAM/app/src/main/res/drawable/button_minus.xml" value="0.4205" />
+        <entry key="..\:/ALFATEAM/app/src/main/res/drawable/button_plus.xml" value="0.4205" />
         <entry key="..\:/ALFATEAM/app/src/main/res/drawable/button_reg.xml" value="0.3465" />
         <entry key="..\:/ALFATEAM/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.4925" />
+        <entry key="..\:/ALFATEAM/app/src/main/res/drawable/ic_russia_flag.xml" value="0.5435" />
+        <entry key="..\:/ALFATEAM/app/src/main/res/drawable/ic_us_flag.xml" value="0.5435" />
         <entry key="..\:/ALFATEAM/app/src/main/res/drawable/logo.xml" value="0.1675" />
         <entry key="..\:/ALFATEAM/app/src/main/res/drawable/progress_bar_gradient.xml" value="0.5435" />
         <entry key="..\:/ALFATEAM/app/src/main/res/drawable/progress_bar_loading.xml" value="0.2865" />
         <entry key="..\:/ALFATEAM/app/src/main/res/drawable/registration_oval.xml" value="0.49" />
+        <entry key="..\:/ALFATEAM/app/src/main/res/drawable/ripple_button.xml" value="0.356" />
+        <entry key="..\:/ALFATEAM/app/src/main/res/drawable/shadow_menu.xml" value="0.4215" />
         <entry key="..\:/ALFATEAM/app/src/main/res/drawable/splash_screen.xml" value="0.1675" />
         <entry key="..\:/ALFATEAM/app/src/main/res/drawable/test_progress_bar.xml" value="0.4105" />
         <entry key="..\:/ALFATEAM/app/src/main/res/layout-h400dp/fragment_main.xml" value="0.5541666666666667" />
@@ -21,13 +33,15 @@
         <entry key="..\:/ALFATEAM/app/src/main/res/layout-sw240dp/fragment_main.xml" value="0.5541666666666667" />
         <entry key="..\:/ALFATEAM/app/src/main/res/layout-sw240dp/frament_main.xml" value="0.9" />
         <entry key="..\:/ALFATEAM/app/src/main/res/layout/activity_main.xml" value="0.5541666666666667" />
-        <entry key="..\:/ALFATEAM/app/src/main/res/layout/fragment_dollar.xml" value="0.4598393574297189" />
-        <entry key="..\:/ALFATEAM/app/src/main/res/layout/fragment_main.xml" value="0.5116666666666667" />
+        <entry key="..\:/ALFATEAM/app/src/main/res/layout/fragment_dollar.xml" value="1.0" />
+        <entry key="..\:/ALFATEAM/app/src/main/res/layout/fragment_main.xml" value="0.61875" />
         <entry key="..\:/ALFATEAM/app/src/main/res/layout/fragment_menu.xml" value="1.25" />
-        <entry key="..\:/ALFATEAM/app/src/main/res/layout/fragment_registration.xml" value="0.5" />
+        <entry key="..\:/ALFATEAM/app/src/main/res/layout/fragment_registration.xml" value="0.47368421052631576" />
+        <entry key="..\:/ALFATEAM/app/src/main/res/layout/fragment_sad.xml" value="1.25" />
         <entry key="..\:/ALFATEAM/app/src/main/res/layout/hero.xml" value="0.33" />
-        <entry key="..\:/ALFATEAM/app/src/main/res/layout/menuapp_item.xml" value="1.1565656565656566" />
+        <entry key="..\:/ALFATEAM/app/src/main/res/layout/menuapp_item.xml" value="1.5" />
         <entry key="..\:/ALFATEAM/app/src/main/res/layout/navigation.xml" value="0.553125" />
+        <entry key="..\:/androidProject/ALFATEAM/app/src/main/res/drawable/appitem_background.xml" value="0.411" />
       </map>
     </option>
   </component>
